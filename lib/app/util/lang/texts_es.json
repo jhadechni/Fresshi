@@ -1,0 +1,49 @@
+{
+  "login": {
+    "title": "Ingresa con tu número celular",
+    "verification_code_message": "Te enviaremos un código para verificarlo",
+    "continue_with_your_phone": "Continuar con tu celular"
+  },
+  "home": {
+    "location": "Tu ubicación",
+    "search_bar_message": "¿De qué tienes antojo?",
+    "categories": "Categorías"
+  },
+  "buttons": {
+    "confirm": "Confirmar",
+    "pay": "Pagar",
+    "cancel": "Cancelar",
+    "send": "Enviar",
+    "update": "Actualizar"
+  },
+  "settings": {
+    "language": "Idioma",
+    "notifications": "Notificaciones",
+    "facturation": "Datos de facturación",
+    "logout": "Cerrar sesión",
+    "referal": "Refiere y gana",
+    "bonus": "Redimir código",
+    "faq": "Preguntas frecuentes",
+    "report_problem": "Reportar un problema",
+    "terms_conditions": "Términos y condiciones",
+    "privacy_policy": "Política de privacidad"
+  },
+  "profile": {
+    "edit_profile": "Editar",
+    "payment_methods": "Métodos de pago",
+    "addresses": "Direcciones",
+    "my_fingerprint": "Mi huella",
+    "my_orders": "Historial de pedidos",
+    "support": "Hablar con soporte"
+  },
+  "cart": {
+    "title": "Tu Bolsa",
+    "subtotal": "Subtotal",
+    "delivery": "Entrega estimada",
+    "total": "Total a pagar",
+    "resume": "Resumen",
+    "products_cost": "Costo de productos",
+    "delivery_cost": "Costo de envío",
+    "service_cost": "Tarifa de servicio"
+  }
+}
