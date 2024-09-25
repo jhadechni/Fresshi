@@ -1,0 +1,49 @@
+{
+  "login": {
+    "title": "Log in with your phone number",
+    "verification_code_message": "We will send you a code to verify it",
+    "continue_with_your_phone": "Continue with your phone"
+  },
+  "home": {
+    "location": "Your location",
+    "search_bar_message": "What are you craving?",
+    "categories": "Categories"
+  },
+  "buttons": {
+    "confirm": "Confirm",
+    "pay": "Pay",
+    "cancel": "Cancel",
+    "send": "Send",
+    "update": "Update"
+  },
+  "settings": {
+    "language": "Language",
+    "notifications": "Notifications",
+    "facturation": "Billing information",
+    "logout": "Log out",
+    "referal": "Refer and earn",
+    "bonus": "Redeem code",
+    "faq": "Frequently asked questions",
+    "report_problem": "Report a problem",
+    "terms_conditions": "Terms and conditions",
+    "privacy_policy": "Privacy policy"
+  },
+  "profile": {
+    "edit_profile": "Edit",
+    "payment_methods": "Payment methods",
+    "addresses": "Addresses",
+    "my_fingerprint": "My fingerprint",
+    "my_orders": "Order history",
+    "support": "Talk to support"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "subtotal": "Subtotal",
+    "delivery": "Estimated delivery",
+    "total": "Total to pay",
+    "resume": "Summary",
+    "products_cost": "Product cost",
+    "delivery_cost": "Delivery cost",
+    "service_cost": "Service fee"
+  }
+}
