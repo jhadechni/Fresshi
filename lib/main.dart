@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fresshi/app/util/color_palette.dart';
 import 'package:fresshi/presentation/reusables/adder.dart';
 import 'package:fresshi/presentation/reusables/button.dart';
+import 'package:fresshi/presentation/reusables/info_banner.dart';
+import 'package:fresshi/presentation/reusables/payment_method.dart';
 import 'package:fresshi/presentation/reusables/text_input.dart';
 
 import 'presentation/reusables/banner.dart';
@@ -93,72 +96,100 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            RoundedButton(
-              buttonText: 'Confirmar',
-              onPressed: () => print('hola'),
-              width: 300,
-              height: 60,
-              buttonColor: ColorPalette.secondaryColor,
-            ),
-            CustomTextInput(
-                labelText: 'Nombre(s)',
-                hintText: 'Nombre(s)',
+      body: SingleChildScrollView(
+        child: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            //
+            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+            // action in the IDE, or press "p" in the console), to see the
+            // wireframe for each widget.
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'You have pushed the button this many times:',
+              ),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              RoundedButton(
+                buttonText: 'Confirmar',
+                onPressed: () => print('hola'),
                 width: 300,
-                height: 50,
-                controller: TextEditingController()),
-            Adder(
-              width: 112,
-              height: 48,
-              initialValue: 0,
-              onIncrement: () => print('+1'),
-              onDecrement: () => print('-1'),
-              key: const Key('value'),
-            ),
-            const AutoSlidingBanner(
-              imageUrls: [
-                'https://dtphx.org/wp-content/uploads/2022/04/12c-Liberty-Motel-1911-E.-Van-Buren-1991-DCT-1024x500.jpg', // Image 1
-                'https://dtphx.org/wp-content/uploads/2022/04/Arizona-Center-Grotto-1-1500x500.jpg', // Image 2
-                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg', // Image 3
-                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
-                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
-                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
-                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
-              ],
-              slideDuration: 3, // Auto-slide every 3 seconds
-              bannerWidth: 361, // Customize banner size
-              bannerHeight: 100,
-              dotSize: 10, // Custom dot size
-              activeDotColor: ColorPalette.primaryColor,
-              inactiveDotColor: ColorPalette.dividerColor,
-              hasButton: false,
-            ),
-          ],
+                height: 60,
+                buttonColor: ColorPalette.secondaryColor,
+              ),
+              CustomTextInput(
+                  labelText: 'Nombre(s)',
+                  hintText: 'Nombre(s)',
+                  width: 300,
+                  height: 50,
+                  controller: TextEditingController()),
+              Adder(
+                width: 112,
+                height: 48,
+                initialValue: 0,
+                onIncrement: () => print('+1'),
+                onDecrement: () => print('-1'),
+                key: const Key('value'),
+              ),
+              const AutoSlidingBanner(
+                imageUrls: [
+                  'https://dtphx.org/wp-content/uploads/2022/04/12c-Liberty-Motel-1911-E.-Van-Buren-1991-DCT-1024x500.jpg', // Image 1
+                  'https://dtphx.org/wp-content/uploads/2022/04/Arizona-Center-Grotto-1-1500x500.jpg', // Image 2
+                  'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg'
+                ],
+                slideDuration: 3, // Auto-slide every 3 seconds
+                bannerWidth: 361, // Customize banner size
+                bannerHeight: 100,
+                dotSize: 10, // Custom dot size
+                activeDotColor: ColorPalette.primaryColor,
+                inactiveDotColor: ColorPalette.dividerColor,
+                hasButton: false,
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: InfoBanner(
+                    bannerWidth: 361,
+                    bannerHeight: 110,
+                    bannerTittle: '9999999kg',
+                    tittleFontSize: 40,
+                    bannerDescription: 'De alimentos salvados',
+                    descriptionFontSize: 20,
+                    isRounded: true,
+                    bannerColor: ColorPalette.primaryColor),
+              ),
+              const InfoBanner(
+                  isRounded: false,
+                  bannerHeight: 46,
+                  bannerWidth: 430,
+                  bannerDescription:
+                      'Estás ahorrando 11.000 pesos en esta compra',
+                  descriptionFontSize: 18,
+                  bannerColor: ColorPalette.primaryColor),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: PaymentMethod(
+                  text: 'Efectivo',
+                  icon: FontAwesomeIcons.moneyBill,
+                  height: 50,
+                  width: 400,
+                ),
+              )
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
