@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fresshi/app/util/color_palette.dart';
+import 'package:fresshi/presentation/reusables/adder.dart';
+import 'package:fresshi/presentation/reusables/button.dart';
+import 'package:fresshi/presentation/reusables/text_input.dart';
+
+import 'presentation/reusables/banner.dart';
 
 void main() {
   runApp(const MyApp());
@@ -68,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  //final GlobalKey<_AdderState> _adderKey = GlobalKey<_AdderState>();
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -111,6 +118,45 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            RoundedButton(
+              buttonText: 'Confirmar',
+              onPressed: () => print('hola'),
+              width: 300,
+              height: 60,
+              buttonColor: ColorPalette.secondaryColor,
+            ),
+            CustomTextInput(
+                labelText: 'Nombre(s)',
+                hintText: 'Nombre(s)',
+                width: 300,
+                height: 50,
+                controller: TextEditingController()),
+            Adder(
+              width: 112,
+              height: 48,
+              initialValue: 0,
+              onIncrement: () => print('+1'),
+              onDecrement: () => print('-1'),
+              key: const Key('value'),
+            ),
+            const AutoSlidingBanner(
+              imageUrls: [
+                'https://dtphx.org/wp-content/uploads/2022/04/12c-Liberty-Motel-1911-E.-Van-Buren-1991-DCT-1024x500.jpg', // Image 1
+                'https://dtphx.org/wp-content/uploads/2022/04/Arizona-Center-Grotto-1-1500x500.jpg', // Image 2
+                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg', // Image 3
+                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
+                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
+                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
+                'https://dtphx.org/wp-content/uploads/2022/04/arizona-motel2-neon-1069x500.jpg',
+              ],
+              slideDuration: 3, // Auto-slide every 3 seconds
+              bannerWidth: 361, // Customize banner size
+              bannerHeight: 100,
+              dotSize: 10, // Custom dot size
+              activeDotColor: ColorPalette.primaryColor,
+              inactiveDotColor: ColorPalette.dividerColor,
+              hasButton: false,
             ),
           ],
         ),
