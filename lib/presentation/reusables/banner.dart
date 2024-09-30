@@ -120,6 +120,11 @@ class _AutoSlidingBannerState extends State<AutoSlidingBanner> {
                     child: Image.network(
                       widget.imageUrls[index],
                       fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          color: ColorPalette.dividerColor,
+                        );
+                      },
                     ),
                   );
                 },

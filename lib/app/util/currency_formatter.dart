@@ -5,7 +5,7 @@ class Formatter {
   static String formatNumberCOP(String number) {
     try {
       final numberFormat = NumberFormat.currency(
-        locale: 'es_CO', 
+        locale: 'en_US', 
         symbol: "\$", 
         decimalDigits: 0
       );
