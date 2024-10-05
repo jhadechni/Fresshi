@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fresshi/app/util/color_palette.dart';
+import 'package:fresshi/app/util/color_palette_util.dart';
 import 'package:fresshi/presentation/pages/bottom_navigation/navbar_icons.dart';
 import 'package:fresshi/presentation/pages/bottom_navigation/navbar_item_model.dart';
+import 'package:fresshi/presentation/pages/home/home_page.dart';
 
 class CustomNavbar extends StatefulWidget {
+  const CustomNavbar({super.key});
+
   @override
   _CustomNavbarState createState() => _CustomNavbarState();
 }
@@ -14,7 +17,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
 
   // List of pages corresponding to each navbar item
   final List<Widget> pages = [
-    const SafeArea(child: Center(child: Text('Home'))),
+    const Home(),
     const SafeArea(child: Center(child: Text('Map'))),
     const SafeArea(child: Center(child: Text('Favorites'))),
     const SafeArea(child: Center(child: Text('Me'))),
@@ -41,6 +44,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
         index:
             _selectedIndex, // Show the selected page without rebuilding others
         children: pages,
+        
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20.0), // Adjusted padding for the navbar

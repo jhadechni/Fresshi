@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:fresshi/app/util/color_palette.dart';
-import 'package:lottie/lottie.dart';
+import 'package:fresshi/app/util/color_palette_util.dart';
 
 class PaymentMethod extends StatelessWidget {
   final String text;

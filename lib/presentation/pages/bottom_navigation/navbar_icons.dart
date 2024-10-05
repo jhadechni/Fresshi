@@ -1,6 +1,6 @@
 // Widget for individual navigation bar item
 import 'package:flutter/material.dart';
-import 'package:fresshi/app/util/color_palette.dart';
+import 'package:fresshi/app/util/color_palette_util.dart';
 
 class NavBarItemWidget extends StatelessWidget {
   final IconData icon;

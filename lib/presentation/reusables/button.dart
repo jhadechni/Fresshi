@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fresshi/app/util/color_palette.dart';
 
 class RoundedButton extends StatefulWidget {
   final String buttonText;

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fresshi/app/util/color_palette.dart';
+import 'package:fresshi/app/util/color_palette_util.dart';
 
 class AutoSlidingBanner extends StatefulWidget with Diagnosticable {
   ///The [imageUrls] parameter is a list of URLs of the images to be displayed in the banner.

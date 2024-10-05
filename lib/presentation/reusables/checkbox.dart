@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fresshi/app/util/color_palette.dart';
+import 'package:fresshi/app/util/color_palette_util.dart';
 
 class FavoriteCheckbox extends StatefulWidget {
   final bool initialValue;
