@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fresshi/app/util/color_palette_util.dart';
 import 'package:fresshi/presentation/pages/bottom_navigation/navbar_icons.dart';
 import 'package:fresshi/presentation/pages/bottom_navigation/navbar_item_model.dart';
+import 'package:fresshi/presentation/pages/favorites/favorites_page.dart';
 import 'package:fresshi/presentation/pages/home/home_page.dart';
 
 class CustomNavbar extends StatefulWidget {
@@ -19,7 +20,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
   final List<Widget> pages = [
     const Home(),
     const SafeArea(child: Center(child: Text('Map'))),
-    const SafeArea(child: Center(child: Text('Favorites'))),
+    const Favorite(),
     const SafeArea(child: Center(child: Text('Me'))),
   ];
 
@@ -40,19 +41,18 @@ class _CustomNavbarState extends State<CustomNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index:
-            _selectedIndex, // Show the selected page without rebuilding others
+      body: IndexedStack(     
+        index: _selectedIndex, // Show the selected page without rebuilding others
         children: pages,
         
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(20.0), // Adjusted padding for the navbar
+      bottomNavigationBar: Container(
+         padding: const EdgeInsets.all(20.0),
+        color: Colors.transparent,
         child: Container(
           decoration: BoxDecoration(
-            color: ColorPalette
-                .primaryColor, // Solid dark blue color for the navbar
-            borderRadius: BorderRadius.circular(30), // Rounded corners
+            color: ColorPalette.primaryColor, 
+            borderRadius: BorderRadius.circular(30), 
           ),
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Row(

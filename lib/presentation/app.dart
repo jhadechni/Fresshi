@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fresshi/presentation/pages/favorites/favorites_page.dart';
 import 'package:fresshi/presentation/reusables/info_banner.dart';
 import 'package:get/get.dart';
 
@@ -16,8 +17,8 @@ class App extends StatelessWidget {
         title: 'Fresshi',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            primaryColor: ColorPalette.primaryColor,
-            primarySwatch: Colors.indigo,
+            //primaryColor: ColorPalette.primaryColor,
+            //primarySwatch: Colors.red,
             fontFamily: 'ProductSans'),
         //home: const NavBar(),
         home: CustomNavbar()
